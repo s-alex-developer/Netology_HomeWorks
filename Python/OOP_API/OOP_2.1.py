@@ -1,3 +1,5 @@
+from pprint import pprint
+
 # Задача №1.
 def file_to_dict():
     with open('recipes.txt') as f:
@@ -34,12 +36,12 @@ def get_shop_list_by_dishes(dishes, person_count):
                                                     'quantity': el['quantity'] * person_count}
             else:
                 shop_list[el['ingredient_name']]['quantity'] += el['quantity'] * person_count
-    return print(shop_list)
+    return pprint(shop_list)
 
 
 print('----- Задача №1 -----')
 print()
-print(file_to_dict())
+pprint(file_to_dict())
 print()
 print('----- Задача №2 -----')
 print()
