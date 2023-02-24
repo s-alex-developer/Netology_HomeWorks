@@ -9,7 +9,7 @@ def len_sort(_files_dict):
     return result
 
 
-def all_to_on(new_file_name):
+def all_to_one(new_file_name):
     _files_dict = len_sort(files_dict)
     for _file_name in _files_dict:
         with open(new_file_name, 'a') as new_f:
@@ -23,5 +23,5 @@ def all_to_on(new_file_name):
 files_dict = {'1.txt': None, '2.txt': None, '3.txt': None}
 
 # Вызываем функцию, указывая в качестве аргумента желаемое имя сводного файла.
-all_to_on('123.txt')
+all_to_one('123.txt')
 
