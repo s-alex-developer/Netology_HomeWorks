@@ -9,9 +9,6 @@ CREATE TABLE IF NOT EXISTS employees (
 	first_name VARCHAR(50) NOT NULL,
 	patronymic VARCHAR(50) NOT NULL,
 	last_name VARCHAR(50) NOT NULL,
-	department_id INT REFERENCES departments(id) DEFAULT NULL,
-	superior_id INT REFERENCES employees(id) DEFAULT NULL
+	department_id SMALLINT REFERENCES departments(id) DEFAULT NULL,
+	superior_id SMALLINT REFERENCES employees(id) DEFAULT NULL
 );
-
-
-
