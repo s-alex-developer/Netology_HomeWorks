@@ -2,14 +2,14 @@ CREATE TABLE IF NOT EXISTS genres (
 	PRIMARY KEY(id),
 	  id SERIAL,
 	name VARCHAR(50) NOT NULL,
-		 UNIQUE(name)
+	     UNIQUE(name)
 );
 	
 CREATE TABLE IF NOT EXISTS artists (
 	PRIMARY KEY(id),
 	  id SERIAL,
 	name VARCHAR(50) NOT NULL,
-		 UNIQUE(name)
+	     UNIQUE(name)
 );
 
 CREATE TABLE IF NOT EXISTS artists_genres (
