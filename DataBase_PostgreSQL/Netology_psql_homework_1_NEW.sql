@@ -50,7 +50,7 @@ CREATE TABLE IF NOT EXISTS collections (
 	PRIMARY KEY(id),
 	  id SERIAL,
 	name VARCHAR(50) NOT NULL,
-	year smallint DEFAULT NULL
+	year SMALLINT DEFAULT NULL
 	     CHECK(year BETWEEN 1850 AND 2050)
 );
 
