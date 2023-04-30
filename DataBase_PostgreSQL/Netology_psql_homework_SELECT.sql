@@ -29,5 +29,5 @@ SELECT name
 SELECT name
   FROM songs
  WHERE name ILIKE 'my %'   -- все названия треков на английском, фильтрацию по слову "мое" решил не делать.
- 	OR name ILIKE '% my %' 
- 	OR name ILIKE '% my';
+    OR name ILIKE '% my %' 
+    OR name ILIKE '% my';
