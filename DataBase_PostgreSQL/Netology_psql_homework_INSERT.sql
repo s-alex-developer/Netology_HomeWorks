@@ -74,8 +74,8 @@ VALUES (1, 1),
 /*не менее 15 треков*/
 INSERT INTO songs
 VALUES (1, 'Master Of Puppets', 1, 516),
-       (2,	'War Eternal', 2, 262),
-       (3,	'Aces High', 3, 271),
+       (2, 'War Eternal', 2, 262),
+       (3, 'Aces High', 3, 271),
        (4, 'End of All Hope', 4, 263),
        (5, 'Elan', 5, 287),
        (6, 'Firepower', 6, 207),
