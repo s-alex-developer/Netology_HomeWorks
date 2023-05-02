@@ -1,15 +1,15 @@
 /*не менее 5 жанров*/
 INSERT INTO genres
-VALUES 
-	(1, 'Trash Metal'),
-	(2, 'Melodic Death Metal'),
-	(3, 'Heavy Metal'),
-	(4, 'Symphonic Metal'),
-	(5, 'Hard Rock'),
-	(6, 'Folk Metal'),
-	(7, 'Power Metal'),
-	(8, 'Nu Metal'),
-	(9, 'Alternative Metal');
+VALUES (1, 'Trash Metal'),
+	   (2, 'Melodic Death Metal'),
+	   (3, 'Heavy Metal'),
+	   (4, 'Symphonic Metal'),
+	   (5, 'Hard Rock'),
+	   (6, 'Folk Metal'),
+	   (7, 'Power Metal'),
+	   (8, 'Nu Metal'),
+	   (9, 'Alternative Metal');
+	
 
 /*не менее 8 исполнителей*/
 INSERT INTO artists
