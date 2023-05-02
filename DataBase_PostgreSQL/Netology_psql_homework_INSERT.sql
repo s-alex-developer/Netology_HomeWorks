@@ -1,7 +1,7 @@
 /*не менее 5 жанров*/
 INSERT INTO genres
 VALUES (1, 'Trash Metal'),
-	   (2, 'Melodic Death Metal'),
+       (2, 'Melodic Death Metal'),
 	   (3, 'Heavy Metal'),
 	   (4, 'Symphonic Metal'),
 	   (5, 'Hard Rock'),
