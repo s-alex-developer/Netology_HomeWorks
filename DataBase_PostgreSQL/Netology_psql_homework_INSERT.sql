@@ -1,5 +1,5 @@
 /*не менее 5 жанров*/
-INSERT INTO genres
+INSERT INTO genres (id, name)
 VALUES (1, 'Trash Metal'),
        (2, 'Melodic Death Metal'),
        (3, 'Heavy Metal'),
@@ -12,7 +12,7 @@ VALUES (1, 'Trash Metal'),
 	
 
 /*не менее 8 исполнителей*/
-INSERT INTO artists
+INSERT INTO artists (id, name)
 VALUES (1, 'Metallica'),
        (2, 'Arch Enemy'),
        (3, 'Iron Maiden'),
@@ -23,9 +23,10 @@ VALUES (1, 'Metallica'),
        (8, 'Manowar'),
        (9, 'Motorhead'),
        (10, 'Slipknot'),
-       (11, 'Korn');
+       (11, 'Korn'),
+       (12, 'Sepultura');
 
-INSERT INTO artists_genres
+INSERT INTO artists_genres (genre_id, artist_id)
 VALUES (1, 1),
        (2, 2),
        (4, 4),
@@ -36,10 +37,11 @@ VALUES (1, 1),
        (7, 8),
        (5, 9),
        (8, 10),
-       (9, 11);
+       (9, 11),
+       (1, 12);
 
 /*не менее 8 альбомов*/
-INSERT INTO albums
+INSERT INTO albums (id, "name", "year")
 VALUES (1, 'Master of Puppets', 1986),
        (2, 'War Eternal', 2014),
        (3, 'Powerslave', 1984),
@@ -53,9 +55,11 @@ VALUES (1, 'Master of Puppets', 1986),
        (11, 'Load', 1996),
        (12, 'Orgasmatron ', 1986),
        (13, 'Slipknot', 1999),
-       (14, 'Take a Look in the Mirror', 2003);
+       (14, 'Take a Look in the Mirror', 2003),
+       (15, 'We Are Not Your Kind', 2019),
+       (16, 'Quadra', 2020);
 
-INSERT INTO artists_albums
+INSERT INTO artists_albums (artist_id, album_id)
 VALUES (1, 1),
        (2, 2),
        (3, 3),
@@ -69,10 +73,12 @@ VALUES (1, 1),
        (1, 11),
        (9, 12),
        (10, 13),
-       (11, 14);
+       (11, 14),
+       (10, 15),
+       (12, 16);
 
 /*не менее 15 треков*/
-INSERT INTO songs
+INSERT INTO songs (id, name, album_id, duration)
 VALUES (1, 'Master Of Puppets', 1, 516),
        (2, 'War Eternal', 2, 262),
        (3, 'Aces High', 3, 271),
@@ -88,10 +94,13 @@ VALUES (1, 'Master Of Puppets', 1, 516),
        (13, 'Ain`t My Bitch', 11, 304),
        (14, 'Ain`t My Crime', 12, 224),
        (15, 'Eyeless', 13, 236),
-       (16, 'Did My Time',14, 247);
+       (16, 'Did My Time',14, 247),
+       (17, 'Insert Coin', 15, 98),
+       (18, 'My Pain', 15, 408),
+       (19, 'Quadra', 16, 46);
 
 /*не менее 8 сборников*/
-INSERT INTO collections
+INSERT INTO collections (id, name, year)
 VALUES (1, 'Best Metal Of All Time', 2020),
        (2, 'Best of the Beast', 1996),
        (3, 'Decades', 2018),
@@ -101,7 +110,7 @@ VALUES (1, 'Best Metal Of All Time', 2020),
        (7, 'Antennas to Hell', 2012),
        (8, 'Greatest Hits Vol. 1', 2014);
 
-INSERT INTO collections_songs
+INSERT INTO collections_songs (collection_id, song_id)
 VALUES (1, 1),
        (1, 2),
        (2, 3),
