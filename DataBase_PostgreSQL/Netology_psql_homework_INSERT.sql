@@ -41,7 +41,7 @@ VALUES (1, 1),
        (1, 12);
 
 /*не менее 8 альбомов*/
-INSERT INTO albums (id, "name", "year")
+INSERT INTO albums (id, name, year)
 VALUES (1, 'Master of Puppets', 1986),
        (2, 'War Eternal', 2014),
        (3, 'Powerslave', 1984),
