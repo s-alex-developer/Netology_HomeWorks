@@ -8,7 +8,9 @@ VALUES (1, 'Trash Metal'),
        (6, 'Folk Metal'),
        (7, 'Power Metal'),
        (8, 'Nu Metal'),
-       (9, 'Alternative Metal');
+       (9, 'Alternative Metal'),
+       (10, 'Groove Metal'),
+       (11, 'Speed Metal');
 	
 
 /*не менее 8 исполнителей*/
@@ -24,7 +26,9 @@ VALUES (1, 'Metallica'),
        (9, 'Motorhead'),
        (10, 'Slipknot'),
        (11, 'Korn'),
-       (12, 'Sepultura');
+       (12, 'Sepultura'),
+       (13, 'Machine Head'),
+       (14, 'Slayer');
 
 INSERT INTO artists_genres (genre_id, artist_id)
 VALUES (1, 1),
@@ -41,7 +45,14 @@ VALUES (1, 1),
        (1, 12),
        (3, 1),
        (5, 1),
-       (3, 8);
+       (3, 8),
+       (1, 13),
+       (8, 13),
+       (10,13),
+       (1, 14),
+       (8, 14),
+       (10, 14),
+       (11,14);
 
 /*не менее 8 альбомов*/
 INSERT INTO albums (id, name, year)
@@ -60,7 +71,9 @@ VALUES (1, 'Master of Puppets', 1986),
        (13, 'Slipknot', 1999),
        (14, 'Take a Look in the Mirror', 2003),
        (15, 'We Are Not Your Kind', 2019),
-       (16, 'Quadra', 2020);
+       (16, 'Quadra', 2020),
+       (17, 'Kairos', 2019),
+       (18, 'Evil Tribute To Machine Head', 2017);
 
 INSERT INTO artists_albums (artist_id, album_id)
 VALUES (1, 1),
@@ -78,7 +91,10 @@ VALUES (1, 1),
        (10, 13),
        (11, 14),
        (10, 15),
-       (12, 16);
+       (12, 16),
+       (12, 17),
+       (13, 18),
+       (14, 18);
 
 /*не менее 15 треков*/
 INSERT INTO songs (id, name, album_id, duration)
@@ -100,7 +116,9 @@ VALUES (1, 'Master Of Puppets', 1, 516),
        (16, 'Did My Time',14, 247),
        (17, 'Insert Coin', 15, 98),
        (18, 'My Pain', 15, 408),
-       (19, 'Quadra', 16, 46);
+       (19, 'Quadra', 16, 46),
+       (20, 'Kairos', 17, 217),
+       (21, 'Witching Hour (Venom live cover)', 18, 201);
 
 /*не менее 8 сборников*/
 INSERT INTO collections (id, name, year)
