@@ -35,22 +35,22 @@ SELECT al.name AS albums,
 /*>>> ЗАПРОС ДОРАБОТАЛ*/
 /* 4. Все исполнители, которые не выпустили альбомы в 2020 году.*/
 
-SELECT name AS artists 
-FROM artists
-WHERE name NOT IN 
-      (SELECT ar.name
-        FROM artists AS ar
-             JOIN artists_albums AS aa 
-               ON aa.artist_id = ar.id
-             JOIN albums AS al 
-               ON aa.album_id = al.id
-            WHERE al.year = 2020
-            GROUP BY ar.name);
+SELECT name AS artist
+  FROM artists
+ WHERE name NOT IN 
+       (SELECT ar.name
+          FROM artists AS ar
+               JOIN artists_albums AS aa 
+                 ON aa.artist_id = ar.id
+               JOIN albums AS al 
+                 ON aa.album_id = al.id
+         WHERE al.year = 2020
+         GROUP BY ar.name);
 
 
 /* 5. Названия сборников, в которых присутствует конкретный исполнитель (выберите его сами).*/
 
-SELECT co.name AS collection_names
+SELECT co.name AS collection_name
   FROM collections AS co
        JOIN collections_songs AS cs 
          ON cs.collection_id = co.id 
@@ -63,8 +63,8 @@ SELECT co.name AS collection_names
        JOIN artists AS ar 
          ON aa.artist_id = ar.id
  WHERE ar.name IN ('Metallica', 'Manowar', 'Sepultura') -- Кол-во песен в сборниках: Metallica 1 песня, Manowar 3 песни, Sepultura 0 песен.
- GROUP BY collection_names
- ORDER BY collection_names;
+ GROUP BY collection_name
+ ORDER BY collection_name;
 
 
 /*>>> ЗАПРОС ДОРАБОТАЛ*/
@@ -86,7 +86,7 @@ SELECT DISTINCT al.name AS album
 /*>>> ЗАПРОС ДОРАБОТАЛ*/
 /* 7. Наименования треков, которые не входят в сборники.*/
 
-SELECT so.name AS songs 
+SELECT so.name AS song 
   FROM songs AS so
        LEFT JOIN collections_songs AS cs 
               ON cs.song_id = so.id
