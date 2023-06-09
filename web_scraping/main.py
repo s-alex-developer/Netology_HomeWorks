@@ -6,6 +6,7 @@ from fake_headers import Headers
 
 import json
 from time import sleep
+from pprint import pprint
 
 headers = Headers(browser='firefox', os='win')
 headers_data = headers.generate()
@@ -41,6 +42,8 @@ for p in tqdm(range(9)):
         vacancy_town = vacancy.findAll('div', class_="bloko-text")[-1].text.split(',')[0]
 
         all_vacancy.append([vacancy_name, vacancy_href, vacancy_offer, vacancy_company, vacancy_town])
+
+all_vacancy.pop(68)
 
 header = ['position', 'reference', 'offer', 'company', 'town']
 
