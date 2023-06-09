@@ -17,7 +17,8 @@ for p in tqdm(range(9)):
 
     sleep(0.1)
 
-    url = f'https://spb.hh.ru/search/vacancy?text=python+and+Django+and+Flask&salary=&area=2&area=1&no_magic=true&ored_clusters=true&items_on_page=20&excluded_text=&page={p}'
+    url = f'https://spb.hh.ru/search/vacancy?text=python+and+Django+and+Flask&salary=&area=2&area=1&' \
+          f'no_magic=true&ored_clusters=true&items_on_page=20&excluded_text=&page={p}'
 
     response = requests.get(url, headers=headers_data)
 
@@ -43,13 +44,16 @@ for p in tqdm(range(9)):
 
         all_vacancy.append([vacancy_name, vacancy_href, vacancy_offer, vacancy_company, vacancy_town])
 
-# all_vacancy.pop(68)
-# all_vacancy.pop(70)
 
-header = ['position', 'reference', 'offer', 'company', 'town']
+# Запись файла в формат JSON
 
 with open('vacancies.json', 'w') as file:
     json.dump(all_vacancy, file, ensure_ascii=False, indent=2)
+
+
+# Запись файла в формат CSV
+
+header = ['position', 'reference', 'offer', 'company', 'town']
 
 df = pandas.DataFrame(all_vacancy, columns=header)
 df.to_csv('vacancies.csv', sep=',', encoding='utf8')
