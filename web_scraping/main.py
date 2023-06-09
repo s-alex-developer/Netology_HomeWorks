@@ -43,8 +43,8 @@ for p in tqdm(range(9)):
 
         all_vacancy.append([vacancy_name, vacancy_href, vacancy_offer, vacancy_company, vacancy_town])
 
-all_vacancy.pop(68)
-all_vacancy.pop(70)
+# all_vacancy.pop(68)
+# all_vacancy.pop(70)
 
 header = ['position', 'reference', 'offer', 'company', 'town']
 
