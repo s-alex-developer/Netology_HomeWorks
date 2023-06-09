@@ -52,4 +52,4 @@ with open('vacancies.json', 'w') as file:
     json.dump(all_vacancy, file, ensure_ascii=False, indent=2)
 
 df = pandas.DataFrame(all_vacancy, columns=header)
-df.to_csv('vacancies.csv', sep=';', encoding='utf8')
+df.to_csv('vacancies.csv', sep=',', encoding='utf8')
